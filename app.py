@@ -1,214 +1,251 @@
 import streamlit as st
 
-# -----------------------------
-# BASIC APP CONFIG
-# -----------------------------
+# ======================================================
+# APP CONFIG
+# ======================================================
 st.set_page_config(
     page_title="Neurodiversity Communication Toolkit (Japan)",
     layout="centered"
 )
 
-# -----------------------------
-# GLOBAL STYLE (CALM, LOW LOAD)
-# -----------------------------
+# ======================================================
+# GLOBAL STYLES — DARK BLUE / LIGHT BLUE THEME
+# ======================================================
 st.markdown("""
 <style>
+/* Background */
 body {
-    background-color: #FAFAFA;
+    background-color: #F4F8FC;
 }
+
+/* Main container */
 .block-container {
+    max-width: 780px;
     padding-top: 2rem;
-    max-width: 720px;
 }
+
+/* Headings */
 h1, h2, h3 {
     font-weight: 600;
+    color: #0A2A4A; /* Dark Blue */
 }
+
+/* Card style */
 .card {
     background-color: #FFFFFF;
-    padding: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    border-left: 6px solid #4DA3FF; /* Light Blue Accent */
+    box-shadow: 0px 2px 8px rgba(10, 42, 74, 0.08);
+    margin-bottom: 1.3rem;
+}
+
+/* Subtle text */
+.small {
+    color: #4A657D;
+    font-size: 0.85rem;
+}
+
+/* Button cards */
+.button-card {
+    padding: 1.4rem;
     border-radius: 16px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
-    margin-bottom: 1rem;
+    background-color: #E6F1FF;
+    color: #0A2A4A;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #C7E0FF;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #0A2A4A;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #FFFFFF;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# -----------------------------
-# LANGUAGE TOGGLE
-# -----------------------------
+# ======================================================
+# LANGUAGE SYSTEM
+# ======================================================
 language = st.sidebar.radio(
     "Language / 言語",
     ["日本語", "English"],
     index=0
 )
 
-# -----------------------------
+def t(jp, en):
+    return jp if language == "日本語" else en
+
+# ======================================================
 # CONTENT DATA
-# -----------------------------
+# ======================================================
 PHRASES = {
     "parents_first": {
-        "title_jp": "保護者と初めて話すとき",
-        "title_en": "First conversation with parents",
+        "label": t("保護者と初めて話す", "First conversation with parents"),
         "items": [
             {
-                "jp": "〇〇さんは、とても集中力が高く、興味のあることには深く取り組める力があります。",
-                "en": "Your child shows strong focus and can engage deeply with areas of interest."
+                "category": t("強みから始める", "Opening with strengths"),
+                "jp": "〇〇さんは、興味のあることに深く集中できる力があります。",
+                "en": "Your child shows a strong ability to focus deeply on areas of interest."
             },
             {
-                "jp": "学校では、その力を活かしながら、より安心して学べる方法を一緒に考えたいと思っています。",
-                "en": "At school, we would like to think together about ways to support learning comfortably."
+                "category": t("協力への招待", "Invitation to collaborate"),
+                "jp": "学校では、その力を大切にしながら、一緒に支え方を考えたいと思っています。",
+                "en": "At school, we would like to think together about how to support this strength."
             }
         ]
     },
     "students": {
-        "title_jp": "生徒に説明するとき",
-        "title_en": "Explaining to students",
+        "label": t("生徒に説明する", "Explaining to students"),
         "items": [
             {
+                "category": t("やさしい説明", "Gentle explanation"),
                 "jp": "人それぞれ、考え方や感じ方の道は少しずつ違います。",
-                "en": "Everyone has slightly different ways of thinking and feeling."
+                "en": "Everyone has slightly different paths for thinking and feeling."
             }
         ]
     }
 }
 
-VISUAL_NARRATIVES = {
+VISUALS = {
     "dots": {
-        "title_jp": "ドットの物語",
-        "text_jp": "人の考えは、点の集まりのようなものです。点の並び方が違うと、見える形も変わります。",
-        "text_en": "Thoughts are like dots. When arranged differently, they form different patterns."
+        "title": t("ドットの物語", "Dot Pattern Narrative"),
+        "jp": "人の考えは点の集まりのようなものです。並び方が違えば、見える形も変わります。",
+        "en": "Thoughts are like dots. Different arrangements create different patterns."
     },
     "waves": {
-        "title_jp": "波の物語",
-        "text_jp": "集中や疲れには波があります。波を理解すると、無理をしない選択ができます。",
-        "text_en": "Focus and energy come in waves. Understanding them helps us choose gently."
+        "title": t("波の物語", "Waves Narrative"),
+        "jp": "集中や疲れには波があります。波を知ることで、無理を減らせます。",
+        "en": "Focus and energy come in waves. Understanding them helps reduce strain."
     },
     "paths": {
-        "title_jp": "道の物語",
-        "text_jp": "学びへの道は一つではありません。それぞれに合った道があります。",
-        "text_en": "There is more than one path to learning."
+        "title": t("道の物語", "Pathways Narrative"),
+        "jp": "学びへの道は一つではありません。それぞれに合った道があります。",
+        "en": "There is more than one path to learning."
     }
 }
 
 SCENARIOS = [
     {
-        "title_jp": "保護者に気になる点を伝えたい",
-        "keep_in_mind": "関係性を優先し、断定を避ける",
-        "phrases": "強みから話し始め、協力をお願いする形にする",
-        "visual": "ドットの物語"
+        "title": t("保護者に気になる点を伝えたい", "Talking to a parent about concerns"),
+        "mind": t("関係性を守り、断定を避ける", "Protect the relationship and avoid conclusions"),
+        "phrases": t("強みを起点に、協力の形で伝える", "Begin with strengths and invite collaboration"),
+        "visual": t("ドットの物語", "Dot Narrative")
     },
     {
-        "title_jp": "教室での配慮を説明したい",
-        "keep_in_mind": "子どもの安心感を大切にする",
-        "phrases": "選択肢として伝える",
-        "visual": "道の物語"
+        "title": t("教室での配慮を説明したい", "Explaining classroom adjustments"),
+        "mind": t("安心感と選択肢を大切にする", "Prioritize safety and choice"),
+        "phrases": t("義務ではなく選択として説明する", "Explain as an option, not an obligation"),
+        "visual": t("道の物語", "Pathways Narrative")
     }
 ]
 
-# -----------------------------
+# ======================================================
 # NAVIGATION
-# -----------------------------
+# ======================================================
 menu = st.sidebar.radio(
-    "Menu",
+    t("メニュー", "Menu"),
     [
-        "Home / Today",
-        "Phrases & Scripts",
-        "Visual & Narrative Tools",
-        "Guides for Situations",
-        "About the Framework"
+        t("ホーム", "Home"),
+        t("フレーズ & スクリプト", "Phrases & Scripts"),
+        t("ビジュアルツール", "Visual Tools"),
+        t("状況別ガイド", "Guides"),
+        t("フレームワークについて", "About")
     ]
 )
 
-# -----------------------------
+# ======================================================
 # HOME
-# -----------------------------
-if menu == "Home / Today":
-    st.title("Neurodiversity Communication Toolkit")
+# ======================================================
+if menu == t("ホーム", "Home"):
+    st.title(t("やさしい対話のための支援ツール", "Support for Gentle Communication"))
 
     st.markdown(
-        "<div class='card'>"
-        "日本の教育現場で、やさしく、安心して<br>"
-        "神経多様性について話すための支援ツール"
-        "</div>",
+        f"<div class='card'>{t('日本の教育現場で、神経多様性について安心して話すためのツールです。','A calm, culturally responsive toolkit for discussing neurodiversity in Japanese schools.')}</div>",
         unsafe_allow_html=True
     )
 
     col1, col2, col3 = st.columns(3)
-    col1.button("保護者と話す")
-    col2.button("生徒と話す")
-    col3.button("同僚と話す")
+    col1.markdown(f"<div class='button-card'>{t('保護者と話す','Talking to parents')}</div>", unsafe_allow_html=True)
+    col2.markdown(f"<div class='button-card'>{t('生徒と話す','Talking to students')}</div>", unsafe_allow_html=True)
+    col3.markdown(f"<div class='button-card'>{t('同僚と話す','Talking to colleagues')}</div>", unsafe_allow_html=True)
 
     st.markdown(
-        "<div class='card'>"
-        "Today’s tip: 言葉を選ぶことは、関係を守ることです。"
-        "</div>",
+        f"<div class='card'>{t('今日のヒント：言葉は関係をつくります。','Today’s tip: Words shape relationships.')}</div>",
         unsafe_allow_html=True
     )
 
-# -----------------------------
+# ======================================================
 # PHRASES
-# -----------------------------
-elif menu == "Phrases & Scripts":
-    st.title("Phrases & Scripts")
+# ======================================================
+elif menu == t("フレーズ & スクリプト", "Phrases & Scripts"):
+    st.title(t("フレーズ & スクリプト", "Phrases & Scripts"))
 
     for section in PHRASES.values():
-        st.subheader(section["title_jp"])
+        st.subheader(section["label"])
         for item in section["items"]:
             st.markdown(
-                f"<div class='card'>{item['jp']}<br>"
-                f"<small>{item['en']}</small></div>",
+                f"<div class='card'><strong>{item['category']}</strong><br>"
+                f"{item['jp'] if language == '日本語' else item['en']}"
+                f"<br><span class='small'>{item['en'] if language == '日本語' else item['jp']}</span></div>",
                 unsafe_allow_html=True
             )
 
-# -----------------------------
+# ======================================================
 # VISUAL TOOLS
-# -----------------------------
-elif menu == "Visual & Narrative Tools":
-    st.title("Visual & Narrative Tools")
+# ======================================================
+elif menu == t("ビジュアルツール", "Visual Tools"):
+    st.title(t("ビジュアル & ナラティブ", "Visual & Narrative Tools"))
 
-    for item in VISUAL_NARRATIVES.values():
-        st.subheader(item["title_jp"])
+    for v in VISUALS.values():
         st.markdown(
-            f"<div class='card'>{item['text_jp']}<br>"
-            f"<small>{item['text_en']}</small></div>",
+            f"<div class='card'><strong>{v['title']}</strong><br>"
+            f"{v['jp'] if language == '日本語' else v['en']}"
+            f"<br><span class='small'>{v['en'] if language == '日本語' else v['jp']}</span></div>",
             unsafe_allow_html=True
         )
 
-# -----------------------------
-# SCENARIOS
-# -----------------------------
-elif menu == "Guides for Situations":
-    st.title("Guides for Situations")
+# ======================================================
+# GUIDES
+# ======================================================
+elif menu == t("状況別ガイド", "Guides"):
+    st.title(t("状況別ガイド", "Guides for Situations"))
 
     for s in SCENARIOS:
         st.markdown(
-            f"<div class='card'>"
-            f"<strong>{s['title_jp']}</strong><br>"
-            f"大切にすること: {s['keep_in_mind']}<br>"
-            f"言葉の方向性: {s['phrases']}<br>"
-            f"おすすめの比喩: {s['visual']}"
-            f"</div>",
+            f"<div class='card'><strong>{s['title']}</strong><br>"
+            f"{t('大切にすること','Keep in mind')}: {s['mind']}<br>"
+            f"{t('言葉の方向性','Language approach')}: {s['phrases']}<br>"
+            f"{t('おすすめの比喩','Suggested visual')}: {s['visual']}</div>",
             unsafe_allow_html=True
         )
 
-# -----------------------------
+# ======================================================
 # ABOUT
-# -----------------------------
-elif menu == "About the Framework":
-    st.title("About the Framework")
+# ======================================================
+elif menu == t("フレームワークについて", "About"):
+    st.title(t("フレームワークについて", "About the Framework"))
 
     st.markdown(
-        "<div class='card'>"
-        "このツールは、診断や医療目的のものではありません。<br>"
-        "日本の文化や教育現場に配慮した<br>"
-        "コミュニケーション支援のためのものです。"
-        "</div>",
+        f"<div class='card'>{t('このツールは診断や医療目的のものではありません。','This tool is not for diagnosis or medical use.')}</div>",
         unsafe_allow_html=True
     )
 
-    st.markdown("""
+    st.markdown(t(
+        """
+**三つのレイヤー**
+- 言語レイヤー：トーン、間接性、配慮  
+- ビジュアルレイヤー：ドット・波・道  
+- インタラクションレイヤー：対話の流れ  
+""",
+        """
 **Three Layers**
-- Language Layer: 言葉のトーンと選び方  
-- Visual Layer: ドット・波・道の比喩  
-- Interaction Layer: 会話の流れ  
-""")
+- Language Layer: tone, phrasing, indirectness  
+- Visual Layer: dots, waves, pathways  
+- Interaction Layer: conversation structure  
+"""
+    ))
