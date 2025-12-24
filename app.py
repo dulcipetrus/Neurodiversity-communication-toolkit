@@ -19,7 +19,7 @@ st.markdown(
         background-color: #f4f8fc;
     }
     .main {
-        background-color: #f4f8fc;
+        background-color: #fcb9a8;
     }
     h1, h2, h3 {
         color: #0b2c4a;
