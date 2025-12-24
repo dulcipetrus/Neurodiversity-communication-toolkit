@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # -------------------------------------------------
-# THEME (Dark Blue / Light Blue)
+# THEME (Pastel)
 # -------------------------------------------------
 st.markdown(
     """
