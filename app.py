@@ -180,21 +180,21 @@ elif page == t("ビジュアルツール", "Visual Tools"):
             t("異なるドット、異なる強み", "Different dots, different strengths"),
             t(
                 "人はそれぞれ異なるドットでできています。配置が違っても、すべてが大切なパターンです。",
-                "Everyone is made of different dots. Each pattern is unique and valuable."
+                "Everyone is made up of different dots. Some dots are bright, some are quiet, and some take time to appear. When dots are arranged differently, they create different patterns. Neurodiversity means that everyone's pattern is unique, and all patterns have value."
             )
         ),
         (
             t("異なる波、異なるリズム", "Different waves, different rhythms"),
             t(
-                "学びや集中にはそれぞれのリズムがあります。",
-                "Learning and attention follow different natural rhythms."
+                "穏やかな波のように動く人もいれば、強い波のように動く人もいます。静かな空間を必要とする波もあれば、動きを楽しむ波もあります。学習やコミュニケーションにもリズムがあります。神経多様性とは、一つのパターンを押し付けるのではなく、異なるリズムを尊重することです。",
+                "Some people move like gentle waves, others like strong waves. Some waves need calm space, while others enjoy movement. Learning and communication also have rhythms. Neurodiversity means respecting different rhythms, not forcing one pattern."
             )
         ),
         (
             t("同じ目的地への異なる道", "Different paths to the same place"),
             t(
-                "道は違っても、理解にたどり着くことができます。",
-                "Different paths can lead to the same understanding."
+                "人は学習やコミュニケーションにおいて、それぞれ異なる道を歩みます。まっすぐな道もあれば、曲がりくねった道や途切れる道もあります。異なる道を歩むことは、迷うことを意味するわけではありません。神経多様性とは、理解に至るための異なる道を認めることです。",
+                "People take different paths when they learn or communicate. Some paths are straight; others have curves or pauses. Taking a different path does not mean being lost. Neurodiversity means allowing different paths to reach understanding."
             )
         )
     ]
