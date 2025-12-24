@@ -263,7 +263,7 @@ elif page == t("ガイド", "Guides"):
 # -------------------------------------------------
 # ABOUT
 # -------------------------------------------------
-elif page == t("フレームワークについて", "About the Framework"):
+elif page == t("フレームワークについて", "About the Toolkit"):
     st.title(t("このツールキットについて", "About This Toolkit"))
 
     st.markdown(
