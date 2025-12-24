@@ -98,8 +98,10 @@ if page == t("ホーム", "Home"):
         f"""
         <div class="card">
         {t(
-            "このツールキットは診断や評価を行うものではありません。言葉・ビジュアル・対話の工夫を通じて、対話の負担を軽くするための支援ツールです。",
-            "This toolkit does not provide diagnoses or labels. It offers language, visuals, and guidance to make conversations feel safer and clearer."
+            "このツールキットは、文化的に尊重され、感情的に安全で、実用的に役立つ方法で、教育者が神経多様性についてコミュニケーションできるようにサポートするように設計されています。",
+            "診断やラベル付けは行いません。代わりに、言語、ビジュアル、ガイダンスを提供することで、関係者全員にとって会話がより明確になり、ストレスが軽減されるよう支援します。"
+            "This toolkit is designed to support educators in communicating about neurodiversity in ways that are culturally respectful, emotionally safe, and practically useful." 
+            "It does not provide diagnoses or labels. Instead, it offers language, visuals, and guidance to help conversations feel clearer and less stressful for everyone involved."
         )}
         </div>
         """,
@@ -257,8 +259,10 @@ elif page == t("フレームワークについて", "About the Framework"):
 
     st.markdown(
         t(
-            "このツールキットは、日本の文化的文脈に根ざしたニューロダイバーシティの対話支援フレームワークに基づいています。",
-            "This toolkit is based on a culturally responsive communication framework for neurodiversity in Japan."
+            "このツールキットは、日本における神経多様性に対する文化的に敏感なコミュニケーションに関する研究プロジェクトの一部です。",
+            "これは、特に調和と間接的な表現が重視されるハイコンテクスト文化環境において、コミュニケーション自体がインクルージョンにおいて重要な役割を果たすという考えに基づいています。"
+            "This toolkit is part of a research project on culturally responsive communication for neurodiversity in Japan."
+            "It is based on the idea that communication itself plays a key role in inclusion, especially in high-context cultural settings where harmony and indirect expression are valued."
         )
     )
 
