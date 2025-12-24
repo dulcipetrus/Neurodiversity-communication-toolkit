@@ -100,9 +100,7 @@ if page == t("ホーム", "Home"):
         {t(
             "このツールキットは、文化的に尊重され、感情的に安全で、実用的に役立つ方法で、教育者が神経多様性についてコミュニケーションできるようにサポートするように設計されています。"
             "診断やラベル付けは行いません。代わりに、言語、ビジュアル、ガイダンスを提供することで、関係者全員にとって会話がより明確になり、ストレスが軽減されるよう支援します。",
-            "This toolkit is designed to support educators in communicating about neurodiversity in ways that are culturally respectful, emotionally safe, and practically useful." 
-            
-            "It does not provide diagnoses or labels. Instead, it offers language, visuals, and guidance to help conversations feel clearer and less stressful for everyone involved."
+            "This toolkit is designed to support educators in communicating about neurodiversity in ways that are culturally respectful, emotionally safe, and practically useful." It does not provide diagnoses or labels. Instead, it offers language, visuals, and guidance to help conversations feel clearer and less stressful for everyone involved."
         )}
         </div>
         """,
