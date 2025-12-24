@@ -130,7 +130,7 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
                 ("〇〇さんは、好奇心や創造性といった素敵な力を持っています。",
                  "○○ has many positive qualities, including curiosity and creativity."),
                 ("○○は独自の考え方や学び方を示しています。",
-                 "○○ shows their own unique way of thinking and learning.")
+                 "○○ shows their own unique way of thinking and learning."),
             ]
         ),
         (
@@ -140,9 +140,9 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
                 ("静かな環境だと、集中しやすいようです。",
                 "○○ seems to focus better in quieter environments."),
                 ("学習が容易であると感じられる状況もあれば、より困難であると感じられる状況もあります。",
-                "There are situations where learning feels easier, and others where it feels more challenging.")
+                "There are situations where learning feels easier, and others where it feels more challenging."),
                 ("これは○○が何ができないかということではなく、どうすればより良くサポートできるかということです。",
-                 "This is not about what ○○ cannot do, but about how we can support them better.")
+                 "This is not about what ○○ cannot do, but about how we can support them better."),
             ]
         ),
         (
@@ -151,9 +151,9 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
                 ("どのようなサポートが役立つのか一緒に考えていきたいと思います。",
                  "We would like to think together about what kind of support might be helpful."),
                 ("ご家庭でのご様子もぜひ教えてください。",
-                 "Your insights as a parent are very important to us.")
+                 "Your insights as a parent are very important to us."),
                 ("私たちはこれを家庭と学校の共同の努力だと考えています。",
-                 "We see this as a shared effort between home and school.")
+                 "We see this as a shared effort between home and school."),
             ]
         ),
         (
@@ -162,9 +162,9 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
                 ("ご不明な点やご質問がございましたら、いつでもお気軽にお寄せください。",
                  "Please feel free to share any concerns or questions at any time."),
                 ("一歩ずつ進んでいければと思います。",
-                 "We can take this step by step.")
+                 "We can take this step by step."),
                 ("私たちの目標は、○○が快適に、そしてサポートされていると感じていただくことです。",
-                    "Our goal is for ○○ to feel comfortable and supported.")
+                    "Our goal is for ○○ to feel comfortable and supported."),
             ]
         )
     ]
