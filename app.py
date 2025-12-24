@@ -22,7 +22,7 @@ st.markdown(
         background-color: #fcb9a8;
     }
     h1, h2, h3 {
-        color: #0b2c4a;
+        color: #fcb9a8;
     }
     .card {
         background-color: #fcdce1;
