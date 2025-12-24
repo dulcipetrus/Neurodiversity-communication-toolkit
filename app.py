@@ -283,6 +283,6 @@ elif page == t("フレームワークについて", "About the Framework"):
     st.markdown(
         t(
             "本ツールは診断や医療目的ではありません。",
-            "This toolkit is not a diagnostic or medical tool."
+            "This toolkit is not a diagnostic or medical tool. It does not assess, label or classify individuals. Its purpose is to support communication and understanding."
         )
     )
