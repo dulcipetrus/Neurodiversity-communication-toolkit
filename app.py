@@ -260,10 +260,9 @@ elif page == t("フレームワークについて", "About the Framework"):
 
     st.markdown(
         t(
-            "このツールキットは、日本における神経多様性に対する文化的に敏感なコミュニケーションに関する研究プロジェクトの一部です。",
-            "これは、特に調和と間接的な表現が重視されるハイコンテクスト文化環境において、コミュニケーション自体がインクルージョンにおいて重要な役割を果たすという考えに基づいています。"
-            "This toolkit is part of a research project on culturally responsive communication for neurodiversity in Japan."
-            "It is based on the idea that communication itself plays a key role in inclusion, especially in high-context cultural settings where harmony and indirect expression are valued."
+            "このツールキットは、日本における神経多様性に対する文化的に敏感なコミュニケーションに関する研究プロジェクトの一部です。"
+            "これは、特に調和と間接的な表現が重視されるハイコンテクスト文化環境において、コミュニケーション自体がインクルージョンにおいて重要な役割を果たすという考えに基づいています。",
+            "This toolkit is part of a research project on culturally responsive communication for neurodiversity in Japan. It is based on the idea that communication itself plays a key role in inclusion, especially in high-context cultural settings where harmony and indirect expression are valued."
         )
     )
 
@@ -271,11 +270,11 @@ elif page == t("フレームワークについて", "About the Framework"):
         """
         <div class="card">
         <strong>Language Layer</strong><br>
-        Strength-based, indirect, culturally safe phrasing<br><br>
+        Strength-based, indirect, culturally safe tone and phrasing that reduce emotional risk <br><br>
         <strong>Visual Layer</strong><br>
-        Abstract metaphors and calming design<br><br>
+        Abstract metaphors and visuals that support understanding without labels <br><br>
         <strong>Interaction Layer</strong><br>
-        Harmony-preserving conversation strategies
+        Conversation structures that support collaboration and trust
         </div>
         """,
         unsafe_allow_html=True
