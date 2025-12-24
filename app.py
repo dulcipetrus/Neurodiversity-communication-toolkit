@@ -125,10 +125,10 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
         (
             t("強みから始める", "Opening with strengths"),
             [
-                "まず、お子さんの良いところをお伝えさせてください。",
-                 "First, I’d like to share some of your child’s strengths.",
-                "〇〇さんは、好奇心や創造性といった素敵な力を持っています。",
-                 "○○ has many positive qualities, including curiosity and creativity."
+                ("まず、お子さんの良いところをお伝えさせてください。",
+                 "First, I’d like to share some of your child’s strengths."),
+                ("〇〇さんは、好奇心や創造性といった素敵な力を持っています。",
+                 "○○ has many positive qualities, including curiosity and creativity.")
             ]
         ),
         (
