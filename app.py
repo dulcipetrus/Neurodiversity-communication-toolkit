@@ -221,8 +221,7 @@ elif page == t("ガイド", "Guides"):
             t("保護者との最初の対話", "First conversation with parents"),
             t(
                 "強みから始め、診断的な言葉を避け、協力関係を大切にします。",
-                "Start with strengths and observations, not conclusions. Avoid technical or diagnostic language. Allow silence and reflection.",
-                (Suggested approach:),
+                "Start with strengths and observations, not conclusions. Avoid technical or diagnostic language. Allow silence and reflection."
                 
             )
         ),
