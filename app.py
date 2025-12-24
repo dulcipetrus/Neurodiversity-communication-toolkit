@@ -272,7 +272,6 @@ elif page == t("フレームワークについて", "About the Framework"):
         <strong>Language Layer</strong><br>
         Strength-based, indirect, culturally safe tone and phrasing that reduce emotional risk <br><br>
         <strong>Visual Layer</strong><br>
-        "ラベルなしで理解をサポートする抽象的なメタファーとビジュアル",
         Abstract metaphors and visuals that support understanding without labels <br><br>
         <strong>Interaction Layer</strong><br>
         Conversation structures that support collaboration and trust
