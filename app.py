@@ -134,10 +134,10 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
         (
             t("診断名を使わずに伝える", "Describing needs without labels"),
             [
-                ("静かな環境だと、集中しやすいようです。",
-                 "○○ seems to focus better in quieter environments."),
-                ("できないことではなく、サポートの工夫について考えています。",
-                 "This is not about limitations, but about finding supportive conditions.")
+                ("静かな環境だと、集中しやすいようです。")
+                ("できないことではなく、サポートの工夫について考えています。"),
+                 "○○ seems to focus better in quieter environments."
+                 "This is not about limitations, but about finding supportive conditions."
             ]
         ),
         (
