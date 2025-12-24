@@ -139,7 +139,7 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
             [
                 ("静かな環境だと、集中しやすいようです。",
                 "○○ seems to focus better in quieter environments."),
-                ("学習が容易であると感じられる状況もあれば、より困難であると感じられる状況もあります。"),
+                ("学習が容易であると感じられる状況もあれば、より困難であると感じられる状況もあります。",
                 "There are situations where learning feels easier, and others where it feels more challenging.")
                 ("これは○○が何ができないかということではなく、どうすればより良くサポートできるかということです。",
                  "This is not about what ○○ cannot do, but about how we can support them better.")
