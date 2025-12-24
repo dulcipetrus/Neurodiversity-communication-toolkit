@@ -132,40 +132,6 @@ elif page == t("フレーズ & スクリプト", "Phrases & Scripts"):
             ]
         ),
         (
-            import streamlit as st
-
-def describing_needs_without_labels():
-    st.markdown(
-        """
-        <div style="
-            padding: 18px 16px;
-            border-radius: 16px;
-            background-color: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            margin-bottom: 20px;
-        ">
-            <h3 style="margin-top: 0; margin-bottom: 12px;">
-                Describing needs without labels
-            </h3>
-
-            <ul style="padding-left: 18px; margin: 0;">
-                <li style="margin-bottom: 10px; line-height: 1.6;">
-                    “There are situations where learning feels easier, and others where it feels more challenging.”
-                </li>
-                <li style="margin-bottom: 10px; line-height: 1.6;">
-                    “○○ seems to focus better in quieter or more structured environments.”
-                </li>
-                <li style="margin-bottom: 0; line-height: 1.6;">
-                    “This is not about what ○○ cannot do, but about how we can support them better.”
-                </li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-# Call the function wherever this section should appear
-describing_needs_without_labels()
 
             t("診断名を使わずに伝える", "Describing needs without labels"),
             [
