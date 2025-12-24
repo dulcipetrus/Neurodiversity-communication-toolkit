@@ -10,13 +10,13 @@ st.set_page_config(
 )
 
 # -------------------------------------------------
-# THEME (Light cyan)
+# THEME (Pastel)
 # -------------------------------------------------
 st.markdown(
     """
     <style>
     body {
-        background-color: #f4f8fc;
+        background-color: #fcb9a8;
     }
     .main {
         background-color: #fcb9a8;
